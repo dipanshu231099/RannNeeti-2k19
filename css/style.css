@@ -2024,18 +2024,14 @@ figure.vimeo a img, figure.youtube a img {
 /* #Parallax
 ================================================== */
 
-.parallax {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	position: absolute;
-	top: 0; 
-	left: 0; 
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	width:100%;  
-}
+.parallax { 
+    background-image: url("../public/photos/background.jpg"); 
+    min-height: 500px;  
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+} 
  
 /* #Blog
 ================================================== */
@@ -2808,7 +2804,6 @@ figure.vimeo a img, figure.youtube a img {
 
 .tipper.bottom .tipper-content {  }
 .tipper.bottom .tipper-caret { background-position: center top; top: -5px; left: 0; }
-
 
 
 /* #Media
