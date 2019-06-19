@@ -276,7 +276,7 @@ mark{
 	background-position: top center;
 	background-size: 43px 43px;
 	cursor: pointer;
-	background-image: url('../img/arrow-up.svg');
+	background-image: url('/photos/arrow-up.svg');
 	transform: translateY(-50%);
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear; 
@@ -2024,14 +2024,18 @@ figure.vimeo a img, figure.youtube a img {
 /* #Parallax
 ================================================== */
 
-.parallax { 
-    background-image: url("../public/photos/background.jpg"); 
-    min-height: 500px;  
-    background-attachment: fixed; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-} 
+.parallax {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width:100%;  
+}
  
 /* #Blog
 ================================================== */
@@ -2526,6 +2530,23 @@ figure.vimeo a img, figure.youtube a img {
     -webkit-transition: all 250ms linear;
     transition: all 250ms linear;
 }
+.ajax input{
+	position:relative;
+	width: 100%;
+	padding:20px 20px;
+	font-weight: 400;
+	letter-spacing:1px;
+	font-size: 15px;
+	line-height: 1.7;
+	background-color: #080808;
+	color: #fff;
+	border:none;
+	text-align: center;
+	cursor: text;
+    -webkit-transition: all 250ms linear;
+    transition: all 250ms linear;
+}
+
 .ajax-form textarea {
 	position:relative;
 	width: 100%;
@@ -2544,18 +2565,28 @@ figure.vimeo a img, figure.youtube a img {
     transition: all 250ms linear;
 }
 .ajax-form textarea:active,
-.ajax-form input:active {	
+.ajax-form input:active,
+.ajax input:active {	
 	color: #ccc;
 }
+
 .ajax-form textarea:active,
-.ajax-form input:hover {	
+.ajax-form input:hover
+.ajax input:active {	
 	color: #ccc;
 }
 .ajax-form textarea:focus,
-.ajax-form input:focus {	 
+.ajax-form input:focus,
+.ajax input:focus  {	 
     outline: none !important;
 }
 .ajax-form input:-ms-input-placeholder  {
+	font-size: 15px;
+	letter-spacing:1px;
+	color: rgba( 255,255,255, 0.6);
+	font-weight: 700;
+}
+.ajax input:-ms-input-placeholder  {
 	font-size: 15px;
 	letter-spacing:1px;
 	color: rgba( 255,255,255, 0.6);
@@ -2567,7 +2598,20 @@ figure.vimeo a img, figure.youtube a img {
 	color: rgba( 255,255,255, 0.6);
 	font-weight: 700;
 }
+.ajax input::-moz-placeholder  {
+	font-size: 15px;
+	letter-spacing:1px;
+	color: rgba( 255,255,255, 0.6);
+	font-weight: 700;
+}
+
 .ajax-form input:-moz-placeholder  {
+	font-size: 15px;
+	letter-spacing:1px;
+	color: rgba( 255,255,255, 0.6);
+	font-weight: 700;
+}
+.ajax input:-moz-placeholder  {
 	font-size: 15px;
 	letter-spacing:1px;
 	color: rgba( 255,255,255, 0.6);
@@ -2579,18 +2623,26 @@ figure.vimeo a img, figure.youtube a img {
 	color: rgba( 255,255,255, 0.6);
 	font-weight: 700;
 }
+.ajax input::-webkit-input-placeholder  {
+	font-size: 15px;
+	letter-spacing:1px;
+	color: rgba( 255,255,255, 0.6);
+	font-weight: 700;
+}
 .ajax-form textarea:-ms-input-placeholder  {
 	font-size: 15px;
 	letter-spacing:1px;
 	color: rgba( 255,255,255, 0.6);
 	font-weight: 700;
 }
+
 .ajax-form textarea::-moz-placeholder  {
 	font-size: 15px;
 	letter-spacing:1px;
 	color: rgba( 255,255,255, 0.6);
 	font-weight: 700;
 }
+
 .ajax-form textarea:-moz-placeholder  {
 	font-size: 15px;
 	letter-spacing:1px;
@@ -2634,81 +2686,7 @@ figure.vimeo a img, figure.youtube a img {
 	background-color: #313131;
 }
 
-.list {
-	margin: 0 auto;
-	padding: 0;
-	text-align: center;
-}
-.list__item {
-	margin: 0 0 .5rem 0;
-	padding: 0;
-	list-style: none;
-}
-.list__item:last-child {
-	margin: 0;
-}
-.label--checkbox {
-	position: relative;
-	line-height: 135%;
-	cursor: pointer;
-	background: transparent;
-	text-align: center;
-}
-.checkbox {
-	position: relative;
-	top: -0.8rem;
-	margin: 0 2rem 0 0;
-	cursor: pointer;
-	background: transparent;
-	width: 0 !important;
-	height: 0 !important;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-align: center;
-}
-.checkbox:active, 
-.checkbox:focus{
-	border: none;
-	outline: none;
-}
-.checkbox:before {
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	content: "";
-	position: absolute;
-	left: 0;
-	z-index: 1;
-	width: 1rem;
-	height: 1rem;
-	border: 2px solid rgba(255,255,255,.4);
-	background: transparent;
-}
-.checkbox:checked:before {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	height: .5rem;
-	margin-top: 2px;
-	border-top-style: none;
-	border-right-style: none;
-	background: transparent;
-}
-.checkbox:after {
-	content: "";
-	position: absolute;
-	top: -0.125rem;
-	left: 0;
-	width: 1.1rem;
-	height: 1.1rem;
-	background: transparent;
-	cursor: pointer;
-}
-.checkbox:checked:before{
-	border-color: #fff;
-}
+
 .contact-link{
 	font-size: 15px;
 	line-height: 1.7;
@@ -2804,6 +2782,7 @@ figure.vimeo a img, figure.youtube a img {
 
 .tipper.bottom .tipper-content {  }
 .tipper.bottom .tipper-caret { background-position: center top; top: -5px; left: 0; }
+
 
 
 /* #Media
@@ -2986,7 +2965,6 @@ figure.vimeo a img, figure.youtube a img {
 		line-height: 20px;
 	}
 }
-
 
 
 
