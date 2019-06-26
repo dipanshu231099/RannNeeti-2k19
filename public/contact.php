@@ -115,18 +115,18 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-4 ajax-form">
-						<input class="cursor-link" name="name" type="text" placeholder="Your Name: *" autocomplete="off">
+						<input class="cursor-link" method="POST" name="name" type="text" placeholder="Your Name: *" autocomplete="off">
 					</div>
 					<div class="col-md-4 mt-4 mt-md-0 ajax-form">
-						<input class="cursor-link" name="email" type="text" placeholder="E-Mail: *" autocomplete="off">
+						<input class="cursor-link" method="POST" name="email" type="text" placeholder="E-Mail: *" autocomplete="off">
 					</div>
 					<div class="section clearfix"></div>
 					<div class="col-md-8 mt-4 ajax">
-						<input class="cursor-link" name="name" type="text" placeholder="College Name: *" width="100%" autocomplete="off">
+						<input class="cursor-link" name="collegename" method="POST" type="text" placeholder="College Name: *" width="100%" autocomplete="off">
 					</div>
 					<div class="section clearfix"></div>
 					<div class="col-md-8 mt-4 ajax-form">
-						<textarea class="cursor-link" name="message" placeholder="Your Message"></textarea>
+						<textarea class="cursor-link" method="POST" name="message" placeholder="Your Message"></textarea>
 					</div>
 					<div class="section clearfix"></div>
 					<div class="col-md-8 mt-4 ajax-checkbox">
@@ -217,5 +217,14 @@
 	<script src="../javascript/custom.js"></script>  
 <!-- End Document
 ================================================== -->
+
+<?php
+
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$cname=$_POST['collegename'];
+	$_msg=$_POST['message'];
+
+?>
 
 </body></html>
