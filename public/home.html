@@ -3,7 +3,31 @@
 <!--[if gt IE 8]>
 <!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
+    <style>
+    	/* Social Icons */
+#social_side_links {
+	position: fixed;
+  top: 50%;
+  left: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 99;
+}
 
+#social_side_links li a {display: block;}
+
+#social_side_links li a img {
+	display: block;
+	max-width:40px;
+  padding: 10px;
+  -webkit-transition:  background .2s ease-in-out;
+  -moz-transition:  background .2s ease-in-out;
+  -o-transition:  background .2s ease-in-out;
+  transition:  background .2s ease-in-out;
+}
+
+#social_side_links li a:hover img {background: rgba(0, 0, 0, .2);}
+    </style>
 	<!-- Basic Page Needs
 	================================================== -->
 	<meta charset="utf-8">
@@ -51,6 +75,7 @@
 	<link rel="apple-touch-icon" href="photos/logo.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="photos/logo.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="photos/logo.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </head>
 <body class="over-hide">	
@@ -122,14 +147,15 @@
 				<li class="case-study-name">                                         	
 					<span class="cursor-link">GALLERY</span><a href="gallery.html" class="cursor-link cursor-shadow">gallery</a>
 				</li>	
-	<ul class="header-nav__social">
-		<div class="socialmedia" color:"white">
-		<br><br>Follow us on:<br><br>
-                        <a href="https://www.facebook.com/Rannneetivqv/"  target="_blank"><i class="fa fa-facebook"></i>&nbsp&nbspFacebook</a>
-                        <br><br>
-                        <a href="https://www.instagram.com/rann_neeti.iitmandi/"  target="_blank"><i class="fa fa-instagram"></i>&nbsp&nbspInstagram</a></div>
-                </ul>
 			</ul>
+
+			<!-- The social media icon bar -->
+			<!-- Social Icons -->
+<ul id="social_side_links">
+	<li><a style="background-color: #3b5999;" href="https://www.facebook.com/Rannneetivqv/" target="_blank"><img src="https://www.dropbox.com/s/xk5pdj8nks1ymdh/facebook-icon.png?raw=1" alt="" /></a></li>
+	<li><a style="background-color: #e4405f;" href="https://www.instagram.com/rann_neeti.iitmandi/" target="_blank"><img src="https://www.dropbox.com/s/c8in3qcf1uqsqrb/twitter-icon.png?raw=1" alt="" /></a></li>
+</ul>
+
 			<ul class="case-study-images">
 				<li>
 					<div class="img-hero-background" style="background-image: url('./photos/hockey-min.jpg');filter:opacity(0.6)"></div> 
